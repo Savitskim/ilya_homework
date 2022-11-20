@@ -1,23 +1,64 @@
-﻿// Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
+﻿// От меньшего к большему
+// int[] arr = { 11, 5, 3, 3, 16, 6, 7, 1, 1 };
+// void PrintArray(int[] array)
+// {
+//   int count = array.Length;
+//   for (int i = 0; i < count; i++)
+//   {
+//     Console.Write($"{array[i]} ");
+//   }
+//   Console.WriteLine();
+// }
+// void selectionSort(int[] array)
+// {
+//   for (int i = 0; i < array.Length - 1; i++)
+//   {
+//     int minPosition = i;
+//     for (int j = i + 1; j < array.Length; j++)
+//     {
+//       if (array[j] < array[minPosition])
+//       {
+//         minPosition = j;
+//         int temporary = array[i];
+//         array[i] = array[minPosition];
+//         array[minPosition] = temporary;
+//       }
+//     }
+//   }
+// }
+// PrintArray(arr);
+// selectionSort(arr);
+// PrintArray(arr);
 
-// a = 5; b = 7 -> max = 7
-// a = 2 b = 10 -> max = 10
-// a = -9 b = -3 -> max = -3
 
-// Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
-
-// 2, 3, 7 -> 7
-// 44, 5, 78 -> 78
-// 22, 3, 9 -> 22
-
-// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
-
-// 4 -> да
-// -3 -> нет
-// 7 -> нет
-
-// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
-
-// 5 -> 2, 4
-// 8 -> 2, 4, 6, 8
-
+// От большего к меньшему
+int[] arr = { 11, 5, 3, 3, 16, 6, 7, 1, 1 };
+void PrintArray(int[] array)
+{
+  int count = array.Length;
+  for (int i = 0; i < count; i++)
+  {
+    Console.Write($"{array[i]} ");
+  }
+  Console.WriteLine();
+}
+void selectionSort(int[] array)
+{
+  for (int i = 0; i < array.Length - 1; i++)
+  {
+    int maxPosition = i;
+    for (int j = i + 1; j < array.Length; j++)
+    {
+      if (array[j] > array[maxPosition])
+      {
+        maxPosition = j;
+        int temporary = array[i];
+        array[i] = array[maxPosition];
+        array[maxPosition] = temporary;
+      }
+    }
+  }
+}
+PrintArray(arr);
+selectionSort(arr);
+PrintArray(arr);
